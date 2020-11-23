@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web app</title>
+</head>
+<body bgcolor="lightgreen">
+<h1> This is from html!!!</h1>
+<h3> HTML stands for Hypertext Markup Language....</h3>
+{{key1}}
+<br/>
+<a href = "{% url 'result' %}"> Go to results</a>
+<form action = "{% url 'result' %}">
+    {% csrf_token %}
+<!--basically csrf_token is a security key which protect the site with hacking activities-->
+    <br> </br>
+    Age: <input type = "text" name = "user_age">
+    <br> </br>
+    Name: <input type = "text" name = "user_name">
+    <br> </br>
+    Feedback: <textarea cols="20" rows = "10" name = "article"> </textarea>
+    <br> </br>
+
+    <input type = "submit" value = "submit here">
+
+
+</form>
+</body>
+</html>
